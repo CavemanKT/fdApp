@@ -1,0 +1,11 @@
+
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <%= render @friend %>
+    <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-secondary" %>
+    <%= link_to "Back to friends", friends_path, class: "btn btn-secondary m-2" %>
+
+    <%= button_to "Delete", @friend, method: :delete, data: { turbo_confirm: "Are you sure ? " }, class:"btn btn-danger" %>
+  </div>
+</div>
+
