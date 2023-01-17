@@ -5,7 +5,7 @@
 
   <div class="field form-group my-4">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control mt-1" %>
+    <%= f.email_field :email, autocomplete: "email", class:"form-control mt-1", :disabled => true %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -14,7 +14,7 @@
 
   <div class="field form-group my-4">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password", class:"form-control mt-1" %>
+    <%= f.password_field :password, class:"form-control mt-1" %>
     <% if @minimum_password_length %>
       <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
@@ -22,12 +22,12 @@
   
   <div class="field form-group my-4">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control mt-1" %>
+    <%= f.password_field :password_confirmation, class:"form-control mt-1" %>
   </div>
 
   <div class="field form-group my-4">
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password", class:"form-control mt-1" %>
+    <%= f.password_field :current_password, class:"form-control mt-1" %>
   </div>
 
   <div class="actions my-4">
