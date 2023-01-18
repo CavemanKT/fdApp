@@ -29,6 +29,26 @@
 
 <%= link_to "New friend", new_friend_path, class:"btn btn-dark" %>
 
+<div>
+
+<nav id="navbar">
+        <header class="doc-theme">JS Document</header>
+        <ul>
+          <% @users.each do |user| %>
+            <li>
+                <a class="nav-link main-section">
+                  <%= user.email %>
+                </a>
+            </li>
+          <% end%>
+        </ul>
+    </nav>
+  
+<h1 class="text-3xl font-bold underline">
+    Hello world!
+</h1>
+</div>
+
 <% end %>
 
 <% if !@friends %>
