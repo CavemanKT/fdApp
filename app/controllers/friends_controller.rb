@@ -7,6 +7,7 @@ class FriendsController < ApplicationController
     if current_user != nil
       @friends = current_user.friends
     end
+    @user = User.all
   end
 
   # GET /friends/1 or /friends/1.json
@@ -24,7 +25,7 @@ class FriendsController < ApplicationController
 
   # POST /friends or /friends.json
   def create
-    @friend = correct_user.friends.build(friend_params)
+    @friend = current_user.friends.build(friend_params)
 
     respond_to do |format|
       if @friend.save

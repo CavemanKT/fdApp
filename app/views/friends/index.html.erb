@@ -31,6 +31,16 @@
 
 <% end %>
 
+<div>
+  <h3>user list</h3>
+  <% @user.each do |user| %>
+  <ul>
+    <li>
+      <%= user.email %>
+    </li>
+  </ul>
+</div>
+
 <% if !@friends %>
 
   <h1>Nothing is here because I haven't figured out what to put.</h1>
